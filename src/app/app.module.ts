@@ -6,19 +6,22 @@ import { MainComponent } from './main/main.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { CommonModule } from '@angular/common';
+import { MaterialModule } from './material-module';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent
   ],
   imports: [
-
   BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    MaterialModule
   ],
-  exports: [ MatButtonModule],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

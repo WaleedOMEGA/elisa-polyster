@@ -16,9 +16,11 @@ export class MainComponent implements OnInit {
   ships: transport[];
   trains: transport[];
   trams: transport[];
+  panelOpenState = false;
   constructor(public requestService: RequestService) { }
 
   ngOnInit(): void {
+    this.getTransport();
   }
 
   getTransport(){

@@ -2,7 +2,31 @@
 {
   width:80%;
   margin:100px auto;
+  display: flex;
 }
 button{
   cursor: pointer;
+}
+.main{
+  width:30%;
+}
+.button{
+  width:80%;
+  margin:0 auto;
+}
+.image{
+  width:70%;
+}
+.image img{
+  width:100%
+}
+.transports{
+  padding:20px;
+}
+p{
+  font-weight: bolder;
+}
+
+p span{
+  font-weight: normal;
 }

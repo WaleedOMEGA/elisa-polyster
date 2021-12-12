@@ -1,4 +1,130 @@
 <div class="container">
-  <button class='mat-raised-button' (click)="getTransport()">Transport in the next hour</button>
+  <div class="main">
+    <div class="button">
+      <button class='mat-raised-button' (click)="getTransport()">Transport in the next hour</button>
+    </div>
+
+    <div class="transports">
+      <h2 *ngIf='trams'>Trams</h2>
+
+      <div class='transport' *ngFor="let tram of trams">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Destination
+              </mat-panel-title>
+              <mat-panel-description>
+                {{tram.Destination}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Line Number : <span>{{tram.LineNumber}}</span></p>
+          <p>Group of Line : <span>{{tram.GroupOfLine}}</span></p>
+          <p>Stop Area Name : <span>{{tram.StopAreaName}}</span></p>
+          <p>Stop Area Number : <span>{{tram.StopAreaNumber}}</span></p>
+          <p>Journey Number : <span>{{tram.JourneyNumber}}</span></p>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </div>
+      <h2 *ngIf="buses.length">Buses</h2>
+
+      <div class='transport' *ngFor="let bus of buses">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Destination
+              </mat-panel-title>
+              <mat-panel-description>
+                {{bus.Destination}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Line Number : <span>{{bus.LineNumber}}</span></p>
+          <p>Group of Line : <span>{{bus.GroupOfLine}}</span></p>
+          <p>Stop Area Name : <span>{{bus.StopAreaName}}</span></p>
+          <p>Stop Area Number : <span>{{bus.StopAreaNumber}}</span></p>
+          <p>Journey Number : <span>{{bus.JourneyNumber}}</span></p>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </div>
+      <h2 *ngIf="metros.length">Metros</h2>
+
+      <div class='transport' *ngFor="let metro of metros">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Destination
+              </mat-panel-title>
+              <mat-panel-description>
+                {{metro.Destination}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Line Number : <span>{{metro.LineNumber}}</span></p>
+          <p>Group of Line : <span>{{metro.GroupOfLine}}</span></p>
+          <p>Stop Area Name : <span>{{metro.StopAreaName}}</span></p>
+          <p>Stop Area Number : <span>{{metro.StopAreaNumber}}</span></p>
+          <p>Journey Number : <span>{{metro.JourneyNumber}}</span></p>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </div>
+      <h2 *ngIf="ships.length">Ships</h2>
+
+      <div class='transport' *ngFor="let ship of ships">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Destination
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ship.Destination}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Line Number : <span>{{ship.LineNumber}}</span></p>
+          <p>Group of Line : <span>{{ship.GroupOfLine}}</span></p>
+          <p>Stop Area Name : <span>{{ship.StopAreaName}}</span></p>
+          <p>Stop Area Number : <span>{{ship.StopAreaNumber}}</span></p>
+          <p>Journey Number : <span>{{ship.JourneyNumber}}</span></p>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </div>
+      <h2 *ngIf="trains.length">Trains</h2>
+
+      <div class='transport' *ngFor="let train of trains">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Destination
+              </mat-panel-title>
+              <mat-panel-description>
+                {{train.Destination}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Line Number : <span>{{train.LineNumber}}</span></p>
+          <p>Group of Line : <span>{{train.GroupOfLine}}</span></p>
+          <p>Stop Area Name : <span>{{tram.StopAreaName}}</span></p>
+          <p>Stop Area Number : <span>{{train.StopAreaNumber}}</span></p>
+          <p>Journey Number : <span>{{train.JourneyNumber}}</span></p>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </div>
+    </div>
+  </div>
+<div class="image">
+  <img src="../../assets/map.png" alt="map">
+</div>
+
 </div>
 
