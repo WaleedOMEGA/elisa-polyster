@@ -8,7 +8,7 @@ import { ApiService } from './api.service';
 export class RequestService {
 
   constructor(private apiService: ApiService) { }
-  public getRealTimeDepartures(data: any) {
+  public getRealTimeDepartures() {
     const params: RequestParam = new RequestParam();
     // Set query params
     params.queryParams = {
